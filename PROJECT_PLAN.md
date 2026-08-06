@@ -399,7 +399,7 @@ Progress percentage =
 - Profile page
 
 ## 15. Interface Wireframes
-
+```text
 +------------------------------------------------------+
 | ApplyTrack   Dashboard   Opportunities   Logout      |
 +------------------------------------------------------+
@@ -407,16 +407,21 @@ Progress percentage =
 +------------+ +------------+ +------------+
 | Saved: 10  | | Applied: 5 | | Interviews:2|
 +------------+ +------------+ +------------+
+```
 
 Upcoming Deadlines
+
+```text
 --------------------------------------------------------
 Position                 Institution          Deadline
 PhD in AI                University A         Aug 20
 Research Assistant       University B         Aug 25
 --------------------------------------------------------
+```
 
 ### Opportunity list wireframe 
 
+```text
 +------------------------------------------------------+
 | Search: [_____________] Type: [All] Sort: [Deadline] |
 +------------------------------------------------------+
@@ -427,6 +432,7 @@ Research Assistant       University B         Aug 25
                 |               |           |           
                 |               |           |
 
+```
 
 
 [View] [Edit] [Delete]
