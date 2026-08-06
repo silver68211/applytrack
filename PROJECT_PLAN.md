@@ -37,7 +37,7 @@ requirements, track deadlines, update application statuses, and review their ove
 4. The user reviews the opportunity.
 5. The user decides to apply.
 6. The user creates an application record.
-7. The user adds the required documents and tasks.
+7. The user adds the application requirements.
 8. The user marks requirements as completed.
 9. The user submits the application.
 10. The user updates its status.
@@ -61,6 +61,7 @@ requirements, track deadlines, update application statuses, and review their ove
 - Delete an opportunity
 - Search opportunities
 - Filter opportunities
+
 
 ### Application Management
 
@@ -163,6 +164,13 @@ page.
 
 The application must remain usable on desktop and mobile screens.
 
+### US-13 
+As a user, I want to record a follow-up date so that I know when to contact the institution after submitting an application
+
+### US-14
+
+As a user, I want to add personal notes to an application so that I can record important details about the position, interview, or application process.
+
 ## 8. Non-Functional Requirements
 
 ### Security
@@ -256,20 +264,22 @@ access them.
 
 ## 10. Application Statuses
 
-- Saved
-- Reviewing
-- Preparing
-- Submitted
-- Interview
-- Rejected
-- Offer
-- Accepted
-- Withdrawn
+| Status | Meaning |
+|---|---|
+| Saved | The opportunity has been saved but not fully reviewed |
+| Reviewing | The user is examining the opportunity |
+| Preparing | The application materials are being prepared |
+| Submitted | The application has been submitted |
+| Interview | The applicant has received an interview invitation |
+| Rejected | The application was unsuccessful |
+| Offer | The applicant has received an offer |
+| Accepted | The applicant accepted the offer |
+| Withdrawn | The applicant decided not to continue |
 
 ## 11. Initial Data Entities
 
 
-## Opportunity
+### Opportunity
 
 - Owner
 - Title
@@ -284,7 +294,7 @@ access them.
 - Creation date
 - Last update date
 
-## Application
+### Application
 
 - Related opportunity
 - Status
@@ -295,7 +305,7 @@ access them.
 - Creation date
 - Last update date
 
-## Requirement
+### Requirement
 
 - Related application
 - Title
@@ -319,6 +329,7 @@ access them.
 
 A visual presentations: 
 
+```text
 User
   │
   └── Opportunity
@@ -328,8 +339,8 @@ User
               ├── Requirement
               ├── Requirement
               └── Requirement
-
-## Relation types
+```
+### Relation types
 
 User 1 ───── many Opportunities
 Opportunity 1 ───── 0 or 1 Application
@@ -410,10 +421,13 @@ Research Assistant       University B         Aug 25
 | Search: [_____________] Type: [All] Sort: [Deadline] |
 +------------------------------------------------------+
 
-Position: PhD in Machine Learning
-Institution: Example University
-Country: Germany
-Deadline: August 20, 2026
++-----------------------------------------------------+
+    Position    |   Institution |   Country | Deadline
++-----------------------------------------------------+
+                |               |           |           
+                |               |           |
+
+
 
 [View] [Edit] [Delete]
 
@@ -435,6 +449,24 @@ Requirements
 [Add Requirement]
 
 ## 16. Technology Stack
+
+| Part | Technology |
+|---|---|
+| Backend language | Python |
+| Backend framework | Django |
+| Frontend structure | HTML |
+| Frontend styling | CSS and Bootstrap |
+| Frontend programming | Vanilla JavaScript |
+| Database language | SQL |
+| Development database | SQLite |
+| Production database | PostgreSQL |
+| Version control | Git and GitHub |
+| Testing | Django testing framework |
+
+The first version will use Django templates and vanilla JavaScript. React will
+not be used because the goal is to strengthen Django, JavaScript, DOM, Fetch
+API, and server-rendered application skills first.
+
 
 ```
 The first version will use Django templates and vanilla JavaScript. React will not be used because the goal is to strengthen Django, JavaScript, DOM, Fetch API, and server-rendered application skills first.
